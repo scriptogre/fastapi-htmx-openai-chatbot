@@ -1,0 +1,10 @@
+<div class="chat chat-{{ 'start' if role == 'assistant' else 'end' }}">
+  <div class="chat-image avatar">
+    <div class="w-10 rounded-full">
+      <img src="{{ 'https://pyoneers.dev/static/img/avatar-10x-giga-chad.85eb220f3dc1.webp' if role == 'assistant' else 'https://pyoneers.dev/static/img/avatar-default.6653c5f79b31.webp' }}" alt="{{ role|capitalize }} Avatar" />
+    </div>
+  </div>
+  <div class="chat-bubble{% if side == 'start' %} bg-base-100/60{% endif %}">
+    {{ message }}
+  </div>
+</div>
